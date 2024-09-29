@@ -22,6 +22,7 @@ function App() {
           testing script..... {count}
         </button>
         <button>this is testing</button>
+        <button>final testing with kys</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
