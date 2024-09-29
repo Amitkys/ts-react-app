@@ -13,6 +13,12 @@ else
   branch=$2
 fi
 
-# Push to the specified branch
-git push origin "$branch"
+# Check if the specified remote branch exists
+if git ls-remote --exit-code --heads origin "$branch"; then
+  echo "pushing... Branch: '$branch'"
+  git push origin "$branch"
+else
+  echo "Branch '$branch' does not exist on the remote. Aborting push."
+  exit 1
+fi
 
